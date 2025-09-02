@@ -211,8 +211,6 @@ __marimo__/
 data/
 */data/
 datasets/
-models/
-*/models/
 checkpoints/
 *.joblib
 *.pkl

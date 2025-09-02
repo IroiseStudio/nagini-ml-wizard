@@ -10,8 +10,7 @@ sdk_version: 5.42.0
 
 # 🐍🧙 Nagini ML Wizard
 
-**Nagini ML Wizard** is an interactive, step-by-step Gradio app that guides you through the complete machine learning workflow.  
-It is designed to feel like the classic “Windows 98 wizards,” but for data science — helping users explore datasets, train models, and make predictions without writing code.
+**Nagini ML Wizard** is an interactive, step-by-step Gradio app that guides you through the complete machine learning workflow.
 
 ---
 
