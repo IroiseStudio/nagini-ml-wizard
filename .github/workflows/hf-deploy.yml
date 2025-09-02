@@ -25,16 +25,16 @@ jobs:
 
       - name: Prepare workspace for Nagini
         run: |
+          set -e
           rm -rf out && mkdir -p out
           rsync -av --delete \
-            app.py \
-            requirements.txt \
-            README.md \
-            .huggingface.yml \
-            .gitattributes \
-            wizard/ \
-            out/ 2>/dev/null || true
-          ls -la out
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.venv/' \
+            --exclude 'data/' \
+            ./ out/
+          echo "----- OUT TREE -----"
+          find out -maxdepth 2 -type f -print
 
       - name: Init Git for Space content
         working-directory: out
