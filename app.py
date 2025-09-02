@@ -23,11 +23,9 @@ with gr.Blocks(title="🐍🧙 Nagini ML Wizard") as demo:
         - Evaluate with the right metrics  
         - Make single or batch predictions  
         - Export your trained pipeline  
-
-        Think of it like the old **Windows 98 wizards** — but for machine learning.
         """
     )
-    
+
     # -------------------------
     # Tab 1: Data (UPLOAD ONLY)
     # -------------------------
