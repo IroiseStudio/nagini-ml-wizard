@@ -10,7 +10,7 @@ on:
       - 'README.md'
       - '.huggingface.yml'
       - '.gitattributes'
-      - 'ci/**'
+      - '.github/**'
   workflow_dispatch:
 
 jobs:
