@@ -1,0 +1,22 @@
+name: Deploy Nagini ML Wizard to HF Spaces
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app.py'
+      - 'wizard/**'
+      - 'requirements.txt'
+      - 'README.md'
+      - '.huggingface.yml'
+      - 'ci/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync to Space
+        uses: huggingface/actions/hf-sync-to-space@v0
+        with:
+          repo-token: ${{ secrets.HF_TOKEN }}
+          repo-id: AlbanDelamarre/Nagini_ML_Wizard
+          repo-dir: .

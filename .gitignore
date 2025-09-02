@@ -205,3 +205,38 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Project data & models
+data/
+*/data/
+datasets/
+models/
+*/models/
+checkpoints/
+*.joblib
+*.pkl
+*.pt
+*.onnx
+
+# Generated plots / exports
+plots/
+reports/
+*.png
+*.pdf
+
+# Local caches
+.tmp/
+tmp/
+.cache/
+.hf_cache/
+huggingface/
+*.log
+
+# OS miscellany
+.DS_Store
+Thumbs.db
+
+# Local config/tokens
+.huggingface/token
+.hf_token
