@@ -3,7 +3,7 @@ license: cc
 title: Nagini_ML_Wizard
 sdk: gradio
 colorFrom: purple
-colorTo: indigo
+colorTo: pink
 short_description: Nagini ML Wizard walks you through all the essential stages of a machine learning project
 sdk_version: 5.42.0
 ---
@@ -63,14 +63,14 @@ Nagini ML Wizard walks you through all the essential stages of a machine learnin
 
 ### Run on Hugging Face Spaces
 
-Nagini ML Wizard is also deployed as a free interactive demo on Hugging Face Spaces
+Nagini ML Wizard is also deployed as a free interactive demo on [Hugging Face Spaces](https://huggingface.co/spaces/AlbanDelamarre/Nagini_ML_Wizard)
 Every push to the GitHub repo triggers CI/CD via GitHub Actions to redeploy the Space automatically.
 
 ### Run locally (Windows + VS Code)
 
 ```powershell
 # Clone the repo
-git clone https://github.com/<your-username>/Nagini-ML-Wizard.git
+git clone https://github.com/IroiseStudio/Nagini-ML-Wizard.git
 cd Nagini-ML-Wizard
 
 # Create and activate a virtual environment
