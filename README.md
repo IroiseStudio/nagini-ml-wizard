@@ -3,7 +3,7 @@ license: cc
 title: Nagini_ML_Wizard
 sdk: gradio
 colorFrom: purple
-colorTo: pink
+colorTo: blue
 short_description: Nagini ML Wizard walks you through all the essential stages of a machine learning project
 sdk_version: 5.42.0
 ---
