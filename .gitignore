@@ -238,3 +238,5 @@ Thumbs.db
 # Local config/tokens
 .huggingface/token
 .hf_token
+
+docs/
