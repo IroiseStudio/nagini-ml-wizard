@@ -34,6 +34,10 @@ class WizardState:
 
     data_version: int = 0  # bump this on each successful data load
 
+    # Trained model/pipeline and optional class names
+    model: Optional[Any] = None                # fitted sklearn Pipeline/Estimator
+    class_names: Optional[List[str]] = None    # nicer labels for classifiers
+
     def is_ready_for_training(self) -> bool:
         return (
             self.df_clean is not None

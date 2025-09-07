@@ -429,6 +429,21 @@ def _train(model_name: str, param_json: Dict[str, Any], standardize: bool):
 
     # write back to state
     st.pipeline = pipe
+    st.model = pipe
+    # if classification, keep readable class labels for the probability table
+    try:
+        if task == "classification":
+            classes = None
+            # last step in the pipeline is named "model"
+            last = pipe.named_steps.get("model", None)
+            if last is not None and hasattr(last, "classes_"):
+                classes = list(last.classes_)
+            elif hasattr(pipe, "classes_"):  # very rare, but just in case
+                classes = list(pipe.classes_)
+            if classes:
+                st.class_names = [str(c) for c in classes]
+    except Exception:
+        pass
     st.metrics = {"text": metrics_md}
     st.model_name = MODEL_SPECS[model_name]["key"]
 

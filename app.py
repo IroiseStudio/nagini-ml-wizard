@@ -8,6 +8,7 @@ from wizard import eda
 from wizard.tabs.eda_tab import make_eda_tab, bind_state as bind_state_eda
 from wizard.tabs.data_tab import make_data_tab, bind_state as bind_state_data
 from wizard.tabs.train_tab import make_train_tab, bind_state as bind_state_train
+from wizard.tabs.predict_tab import make_predict_tab, bind_state as bind_predict_tab 
 
 
 with gr.Blocks(title="🐍🧙 Nagini ML Wizard") as demo:
@@ -18,6 +19,7 @@ with gr.Blocks(title="🐍🧙 Nagini ML Wizard") as demo:
     bind_state_data(get_state)
     bind_state_eda(get_state)
     bind_state_train(get_state)
+    bind_predict_tab(get_state)    
 
     gr.Markdown(
         """
@@ -37,15 +39,17 @@ with gr.Blocks(title="🐍🧙 Nagini ML Wizard") as demo:
 
     data_version_token = gr.Number(value=0, visible=False)
 
-    # Data FIRST. It will bump state.data_version and update the token.
+    # 1) Data tab
     make_data_tab(version_token=data_version_token)
 
-    # EDA SECOND. It will .change() on that same token.
+    # 2) EDA tab
     make_eda_tab(version_token=data_version_token)
 
-    # 3) Train tab (unchanged)
-
+    # 3) Train tab
     make_train_tab()
+
+    # 4) Predict tab
+    make_predict_tab(version_token=data_version_token)
 
     # -------------------------
     # Tab 1: Data (UPLOAD ONLY)
