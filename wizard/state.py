@@ -32,6 +32,8 @@ class WizardState:
     metrics: Dict[str, Any] = field(default_factory=dict)
     model_name: Optional[str] = None
 
+    data_version: int = 0  # bump this on each successful data load
+
     def is_ready_for_training(self) -> bool:
         return (
             self.df_clean is not None
