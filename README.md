@@ -52,10 +52,6 @@ Nagini ML Wizard walks you through all the essential stages of a machine learnin
    - Upload a CSV for batch predictions
    - View probabilities (for classifiers) or numeric estimates (for regressors)
 
-7. **Export**
-   - Download the trained pipeline as a `.joblib` file
-   - Reuse the model for inference later
-
 ---
 
 ## 🚀 How to Run
