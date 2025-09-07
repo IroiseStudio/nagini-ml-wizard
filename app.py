@@ -32,8 +32,7 @@ with gr.Blocks(title="🐍🧙 Nagini ML Wizard") as demo:
         - Preprocess and guard against leakage  
         - Train models with configurable hyperparameters  
         - Evaluate with the right metrics  
-        - Make single or batch predictions  
-        - Export your trained pipeline  
+        - Make single
         """
     )
 
